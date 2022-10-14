@@ -34,5 +34,5 @@ Route::get('test', function () {
 
 Route::get('products', function () {
     $users = User::all();
-    return view('products', compact('users '));
+    return view('products', compact('users'));
 })->name('products');
