@@ -20,6 +20,8 @@ class DatabaseSeeder extends Seeder
          \App\Models\User::factory()->create([
              'name' => 'Santiago Cortes',
              'email' => 'santicortes1409@gmail.com',
+             'identification' => '1031540344',
+             'amount_saved' => '50000',
              'password' => bcrypt('12345678'),
          ])->assignRole('Super Administrador');
 
@@ -33,6 +35,6 @@ class DatabaseSeeder extends Seeder
              'name' => 'Daniel Cortes',
              'email' => 'santicortes09@gmail.com',
              'password' => bcrypt('12345678'),
-         ])->assignRole('Ahorrador');;
+         ])->assignRole('Ahorrador');
     }
 }

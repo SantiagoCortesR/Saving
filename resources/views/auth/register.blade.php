@@ -10,7 +10,6 @@
 
                 {{-- Form to Register --}}
                 <div class="w-full md:w-4/5 py-10 px-5 md:px-10">
-                {{-- <div class="w-full md:w-1/2 py-10 px-5 md:px-10"> --}}
 
                     {{-- Title and description --}}
                     <div class="text-center mb-10">
@@ -25,8 +24,8 @@
                             @csrf
                             
                             {{-- Inputs 1/2 name and username--}}
-                            <div class="flex -mx-3">
-                                <div class="w-1/2 px-3 mb-5">
+                            <div class="flex mx-3">
+                                <div class="w-full px-3 mb-5">
                                     <x-jet-label for="name" value="{{ __('Nombre') }}" />
                                     <x-jet-input id="name"  type="text" name="name" :value="old('name')" required  placeholder="Santiago Cortes" autofocus autocomplete="name" />
                                 </div>
@@ -37,7 +36,7 @@
                             </div>
 
                             {{-- Inputs 1/2 identification and amount_saved--}}
-                            {{-- <div class="flex -mx-3">
+                            <div class="flex mx-3">
                                 <div class="w-1/2 px-3 mb-5">
                                     <x-jet-label for="identification" value="{{ __('Identificación') }}" />
                                     <x-jet-input id="identification"  type="number" name="identification" :value="old('identification')" required  placeholder="52759624" autofocus autocomplete="identification" />
@@ -46,10 +45,10 @@
                                     <x-jet-label for="amount_saved" value="{{ __('Ahorro Quincenal') }}" />
                                     <x-jet-input id="amount_saved"  type="number" name="amount_saved" :value="old('amount_saved')" required  placeholder="50000" autofocus autocomplete="amount_saved" />
                                 </div>
-                            </div> --}}
+                            </div>
 
                             {{-- Inputs w-full email--}}
-                            <div class="flex -mx-3">
+                            <div class="flex mx-3">
                                 <div class="w-full px-3 mb-5">
                                     <x-jet-label for="email" value="{{ __('Correo Electrónico') }}" />
                                     <x-jet-input id="email"  type="email" name="email" :value="old('email')" required  placeholder="johnsmith@example.com"/>
@@ -57,7 +56,7 @@
                             </div>
                             
                             {{-- Inputs 1/2 password and confirm_password--}}
-                            <div class="flex -mx-3">
+                            <div class="flex mx-3">
                                 <div class="w-1/2 px-3 mb-5">
                                     <x-jet-label for="password" value="{{ __('Contraseña') }}" />
                                     <x-jet-input id="password"  type="password" name="password" :value="old('password')" required  placeholder="*********"/>
