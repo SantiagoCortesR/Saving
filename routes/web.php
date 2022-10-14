@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,3 +27,12 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::get('test', function () {
+    return view('test');
+})->name('test');
+
+Route::get('products', function () {
+    $users = User::all();
+    return view('products', compact('users '));
+})->name('products');

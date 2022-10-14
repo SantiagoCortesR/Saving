@@ -12,9 +12,24 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
-                    </x-jet-nav-link>
+
+                    @can('dashboard')
+                        <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                            {{ __('Dashboard') }}
+                        </x-jet-nav-link>
+                    @endcan
+                    @can('test')
+                        <x-jet-nav-link href="{{ route('test') }}" :active="request()->routeIs('test')">
+                            {{ __('Test') }}
+                        </x-jet-nav-link>
+                    @endcan
+                        
+                    @can('products')
+                        <x-jet-nav-link href="{{ route('products') }}" :active="request()->routeIs('products')">
+                            {{ __('Products') }}
+                        </x-jet-nav-link>
+                    @endcan
+                    
                 </div>
             </div>
 
