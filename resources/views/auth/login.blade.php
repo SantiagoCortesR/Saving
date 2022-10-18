@@ -20,14 +20,16 @@
                             @csrf
                             <div class="flex">
                                 <div class="w-full px-3 mb-5">
-                                    <x-jet-label for="email" value="{{ __('Correo Electrónico') }}" />
-                                    <x-jet-input id="email"  type="email" name="email" :value="old('email')" placeholder="johnsmith@example.com" required />
+                                    <x-jet-label for="identification" value="{{ __('Identificación') }}" />
+                                    <x-jet-input id="identification"  type="number" name="identification" :value="old('identification')" placeholder="johnsmith@example.com" required />
+                                    <x-jet-input-error for="identification" />
                                 </div>
                             </div>
                             <div class="flex">
                                 <div class="w-full px-3 mb-5">
                                     <x-jet-label for="password" value="{{ __('Contraseña') }}" />
                                     <x-jet-input id="password"  type="password" name="password" :value="old('password')" placeholder="*********" required  />
+                                    <x-jet-input-error for="password" />
                                     <a href="{{ route('password.request') }}" class="text-sm text-gray-400 focus:text-blue-500 hover:text-blue-500 hover:underline">¿Se te olvidó tu contraseña?</a>
                                 </div>
                             </div>
